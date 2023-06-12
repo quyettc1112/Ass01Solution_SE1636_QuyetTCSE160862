@@ -1,0 +1,15 @@
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\bin\Debug\net5.0\DataAccessObject.deps.json
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\bin\Debug\net5.0\DataAccessObject.dll
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\bin\Debug\net5.0\DataAccessObject.pdb
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\bin\Debug\net5.0\BusinessObject.dll
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\bin\Debug\net5.0\BusinessObject.pdb
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\obj\Debug\net5.0\DataAccessObject.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\obj\Debug\net5.0\DataAccessObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\obj\Debug\net5.0\DataAccessObject.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\obj\Debug\net5.0\DataAccessObject.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\obj\Debug\net5.0\DataAccessObject.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\obj\Debug\net5.0\DataAccessObject.csproj.CopyComplete
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\obj\Debug\net5.0\DataAccessObject.dll
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\obj\Debug\net5.0\refint\DataAccessObject.dll
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\obj\Debug\net5.0\DataAccessObject.pdb
+C:\Users\Admin\Desktop\Ass01Solution_SE1636_QuyetTCSE160862\Ass01Solution_SE1636_QuyetTCSE160862\DataAccessObject\obj\Debug\net5.0\ref\DataAccessObject.dll
