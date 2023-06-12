@@ -330,11 +330,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Ass01Solution_SE1636_QuyetTCSE160862\\ProjectManagementWinApp_TRANCUONGQUYET\\ProjectManagementWinApp_TRANCUONGQUYET.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\PRN-ASS1-main\\PRN-ASS1-main\\ProjectManagementWinApp_TRANCUONGQUYET\\ProjectManagementWinApp_TRANCUONGQUYET.csproj",
       "projectName": "ProjectManagementWinApp_TRANCUONGQUYET",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\Ass01Solution_SE1636_QuyetTCSE160862\\ProjectManagementWinApp_TRANCUONGQUYET\\ProjectManagementWinApp_TRANCUONGQUYET.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\PRN-ASS1-main\\PRN-ASS1-main\\ProjectManagementWinApp_TRANCUONGQUYET\\ProjectManagementWinApp_TRANCUONGQUYET.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\Ass01Solution_SE1636_QuyetTCSE160862\\ProjectManagementWinApp_TRANCUONGQUYET\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\PRN-ASS1-main\\PRN-ASS1-main\\ProjectManagementWinApp_TRANCUONGQUYET\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -356,8 +356,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\Admin\\source\\repos\\Ass01Solution_SE1636_QuyetTCSE160862\\ProductRepository\\ProductRepository.csproj": {
-              "projectPath": "C:\\Users\\Admin\\source\\repos\\Ass01Solution_SE1636_QuyetTCSE160862\\ProductRepository\\ProductRepository.csproj"
+            "C:\\Users\\Admin\\Desktop\\PRN-ASS1-main\\PRN-ASS1-main\\ProductRepository\\ProductRepository.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\PRN-ASS1-main\\PRN-ASS1-main\\ProductRepository\\ProductRepository.csproj"
             }
           }
         }
@@ -396,7 +396,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
