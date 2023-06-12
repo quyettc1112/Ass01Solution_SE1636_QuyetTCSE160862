@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\Ass01Solution_SE1636_QuyetTCSE160862\ProductRepository\bin\Debug\net5.0\ProductRepository.deps.json
+C:\Users\Admin\source\repos\Ass01Solution_SE1636_QuyetTCSE160862\ProductRepository\bin\Debug\net5.0\ProductRepository.dll
+C:\Users\Admin\source\repos\Ass01Solution_SE1636_QuyetTCSE160862\ProductRepository\bin\Debug\net5.0\ProductRepository.pdb
+C:\Users\Admin\source\repos\Ass01Solution_SE1636_QuyetTCSE160862\ProductRepository\obj\Debug\net5.0\ProductRepository.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Ass01Solution_SE1636_QuyetTCSE160862\ProductRepository\obj\Debug\net5.0\ProductRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\Ass01Solution_SE1636_QuyetTCSE160862\ProductRepository\obj\Debug\net5.0\ProductRepository.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\Ass01Solution_SE1636_QuyetTCSE160862\ProductRepository\obj\Debug\net5.0\ProductRepository.AssemblyInfo.cs
+C:\Users\Admin\source\repos\Ass01Solution_SE1636_QuyetTCSE160862\ProductRepository\obj\Debug\net5.0\ProductRepository.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Ass01Solution_SE1636_QuyetTCSE160862\ProductRepository\obj\Debug\net5.0\ProductRepository.dll
+C:\Users\Admin\source\repos\Ass01Solution_SE1636_QuyetTCSE160862\ProductRepository\obj\Debug\net5.0\refint\ProductRepository.dll
+C:\Users\Admin\source\repos\Ass01Solution_SE1636_QuyetTCSE160862\ProductRepository\obj\Debug\net5.0\ProductRepository.pdb
+C:\Users\Admin\source\repos\Ass01Solution_SE1636_QuyetTCSE160862\ProductRepository\obj\Debug\net5.0\ref\ProductRepository.dll
