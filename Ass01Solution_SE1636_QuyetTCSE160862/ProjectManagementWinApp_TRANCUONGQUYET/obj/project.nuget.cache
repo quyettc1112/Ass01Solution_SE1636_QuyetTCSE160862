@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "KE+1oFFQ3/3RRRs6LoVLF6wFj2UodQVhKH5sY1GMxW4hEjrG24AUa/27i0G4/T9hq9lrFuukcas2XM/NHqwkFA==",
+  "dgSpecHash": "bKoPKPe3U2ugAsgjP6xJWJnOP7a0yN3TP2fqAK5MijAhV0YCiKrboxSFwAqTZN4uRneX1QHWb/+DwN6un+BcfQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Ass01Solution_SE1636_QuyetTCSE160862\\Ass01Solution_SE1636_QuyetTCSE160862\\ProjectManagementWinApp_TRANCUONGQUYET\\ProjectManagementWinApp_TRANCUONGQUYET.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Ass01Solution_SE1636_QuyetTCSE160862\\Ass01Solution_SE1636_QuyetTCSE160862\\ProjectManagementWinApp_TRANCUONGQUYET\\ProjectManagementWinApp_TRANCUONGQUYET.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\5.0.0\\microsoft.extensions.configuration.fileextensions.5.0.0.nupkg.sha512",
@@ -11,7 +12,9 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\5.0.0\\microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\octopus.client\\14.3.651\\octopus.client.14.3.651.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

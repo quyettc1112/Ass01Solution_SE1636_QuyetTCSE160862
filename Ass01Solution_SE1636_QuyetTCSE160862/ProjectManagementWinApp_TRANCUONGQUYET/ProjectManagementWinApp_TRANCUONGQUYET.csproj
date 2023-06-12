@@ -9,10 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ProductRepository\ProductRepository.csproj" />
+    <PackageReference Include="Octopus.Client" Version="14.3.651" />
   </ItemGroup>
 
   <ItemGroup>
