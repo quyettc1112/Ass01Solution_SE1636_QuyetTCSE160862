@@ -19,6 +19,11 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
 
+
+
+
+
+
         }
     }
 }
