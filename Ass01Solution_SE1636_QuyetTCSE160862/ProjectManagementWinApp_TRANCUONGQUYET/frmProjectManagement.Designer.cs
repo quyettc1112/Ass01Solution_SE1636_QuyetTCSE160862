@@ -191,6 +191,7 @@
             btnLoad.TabIndex = 18;
             btnLoad.Text = "Load";
             btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Click += btnLoad_Click;
             // 
             // btnAdd
             // 

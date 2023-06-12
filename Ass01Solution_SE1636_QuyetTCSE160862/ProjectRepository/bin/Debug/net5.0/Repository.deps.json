@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Repository/1.0.0": {
+        "dependencies": {
+          "BusinessObject": "1.0.0",
+          "DataAccessObject": "1.0.0"
+        },
+        "runtime": {
+          "Repository.dll": {}
+        }
+      },
+      "BusinessObject/1.0.0": {
+        "runtime": {
+          "BusinessObject.dll": {}
+        }
+      },
+      "DataAccessObject/1.0.0": {
+        "dependencies": {
+          "BusinessObject": "1.0.0"
+        },
+        "runtime": {
+          "DataAccessObject.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BusinessObject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataAccessObject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

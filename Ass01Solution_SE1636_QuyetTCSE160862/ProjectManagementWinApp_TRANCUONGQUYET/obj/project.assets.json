@@ -172,6 +172,43 @@
             "related": ".xml"
           }
         }
+      },
+      "BusinessObject/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BusinessObject.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessObject.dll": {}
+        }
+      },
+      "DataAccessObject/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BusinessObject": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DataAccessObject.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccessObject.dll": {}
+        }
+      },
+      "Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BusinessObject": "1.0.0",
+          "DataAccessObject": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repository.dll": {}
+        }
       }
     }
   },
@@ -514,12 +551,28 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "BusinessObject/1.0.0": {
+      "type": "project",
+      "path": "../BusinessObject/BusinessObject.csproj",
+      "msbuildProject": "../BusinessObject/BusinessObject.csproj"
+    },
+    "DataAccessObject/1.0.0": {
+      "type": "project",
+      "path": "../DataAccessObject/DataAccessObject.csproj",
+      "msbuildProject": "../DataAccessObject/DataAccessObject.csproj"
+    },
+    "Repository/1.0.0": {
+      "type": "project",
+      "path": "../ProjectRepository/Repository.csproj",
+      "msbuildProject": "../ProjectRepository/Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
       "Microsoft.Extensions.Configuration.Json >= 5.0.0",
-      "Octopus.Client >= 14.3.651"
+      "Octopus.Client >= 14.3.651",
+      "Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -554,7 +607,11 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Admin\\Desktop\\Ass01Solution_SE1636_QuyetTCSE160862\\Ass01Solution_SE1636_QuyetTCSE160862\\ProjectRepository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\Ass01Solution_SE1636_QuyetTCSE160862\\Ass01Solution_SE1636_QuyetTCSE160862\\ProjectRepository\\Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
