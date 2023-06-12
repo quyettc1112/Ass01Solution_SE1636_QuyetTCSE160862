@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+VZQCNcYCcb5HYYFr82OyO4Cx/ISESaeWYJZ1hWEr2yp9SIIrIgHHQv/hx/OlMRqJ9gPhqCT9s6BDzIDQj2JEw==",
+  "dgSpecHash": "+PblM2IOMz00OfBw+cC9X00BYtU6UREVHxSd0u5eqzCiiZFTSgrTiEG9zIq5uoDSekRfU6cO67JuobecDjxrMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\PRN-ASS1-main\\PRN-ASS1-main\\ProjectManagementWinApp_TRANCUONGQUYET\\ProjectManagementWinApp_TRANCUONGQUYET.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Ass01Solution_SE1636_QuyetTCSE160862\\Ass01Solution_SE1636_QuyetTCSE160862\\ProjectManagementWinApp_TRANCUONGQUYET\\ProjectManagementWinApp_TRANCUONGQUYET.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",

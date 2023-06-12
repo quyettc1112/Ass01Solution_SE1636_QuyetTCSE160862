@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\PRN-ASS1-main\\PRN-ASS1-main\\BusinessObject\\BusinessObject.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Ass01Solution_SE1636_QuyetTCSE160862\\Ass01Solution_SE1636_QuyetTCSE160862\\BusinessObject\\BusinessObject.csproj",
       "projectName": "BusinessObject",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\PRN-ASS1-main\\PRN-ASS1-main\\BusinessObject\\BusinessObject.csproj",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\Ass01Solution_SE1636_QuyetTCSE160862\\Ass01Solution_SE1636_QuyetTCSE160862\\BusinessObject\\BusinessObject.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\PRN-ASS1-main\\PRN-ASS1-main\\BusinessObject\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\Ass01Solution_SE1636_QuyetTCSE160862\\Ass01Solution_SE1636_QuyetTCSE160862\\BusinessObject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
