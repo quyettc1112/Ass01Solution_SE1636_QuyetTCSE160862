@@ -12,5 +12,6 @@ namespace BusinessObject
         public string ProjectAddress { get; set; }
         public string ProjectCity { get; set; } 
 
+
     }
 }

@@ -31,7 +31,23 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
 
 
 
+        // Hàm check nhập thiếu dử liệu
+        private bool ValidateInputs(ProjectObject P)
+        {
+            if (string.IsNullOrEmpty(P.ProjectID) ||
+                string.IsNullOrEmpty(P.ProjectName) ||
+                string.IsNullOrEmpty(P.ProjectDescription) ||
+                string.IsNullOrEmpty(P.EstimatedEndDate) ||
+                string.IsNullOrEmpty(P.EstimatedStartDate) ||
+                string.IsNullOrEmpty(P.ProjectAddress) ||
+                string.IsNullOrEmpty(P.ProjectCity))
+            {
+                MessageBox.Show("Hãy điền đầy đủ thông tin", "Thiếu Thông Tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
 
+            return true;
+        }
 
 
         //-Hàm nay để thêm mới Project hoặc Update Project
@@ -49,16 +65,38 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
                     ProjectAddress = tbProjectAddress.Text,
                     ProjectDescription = tbProjectDes.Text,
                 };
-                if (InsertOrUpdate == false)
+
+
+
+                if (ValidateInputs(P) == true)
                 {
-                    // Tạo mới
-                    ProjectRepository.AddNewProject(P);
-                    DialogResult = DialogResult.OK;
-                }
-                else
-                {
-                    ProjectRepository.UpdateProject(P);
-                    DialogResult = DialogResult.OK;
+
+                    if (InsertOrUpdate == false)
+                    {
+                        // Tạo mới
+                        ProjectRepository.AddNewProject(P);
+                        DialogResult d;
+                        d = MessageBox.Show($"Bạn sẽ thêm Project {P.ProjectName}", "Quản lý thông tin Project - Thêm Dữ Liệu", MessageBoxButtons.OKCancel, MessageBoxIcon.Question,
+                        MessageBoxDefaultButton.Button1);
+
+                        if (d == DialogResult.OK)
+                        {
+                            DialogResult = DialogResult.OK;
+                        }
+
+                    }
+                    else
+                    {
+                        ProjectRepository.UpdateProject(P);
+                        DialogResult d;
+                        d = MessageBox.Show($"Bạn sẽ cập nhật Project {P.ProjectName}", "Quản lý thông tin Project - Cập Nhật Dữ Liêu", MessageBoxButtons.OKCancel, MessageBoxIcon.Question,
+                        MessageBoxDefaultButton.Button1);
+                        if (d == DialogResult.OK)
+                        {
+                            DialogResult = DialogResult.OK;
+                        }
+
+                    }
                 }
             }
             catch (Exception ex)

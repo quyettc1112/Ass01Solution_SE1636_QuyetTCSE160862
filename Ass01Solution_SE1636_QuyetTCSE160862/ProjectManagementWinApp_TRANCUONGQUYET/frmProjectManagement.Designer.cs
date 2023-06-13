@@ -49,6 +49,8 @@
             dtEEndDAte = new System.Windows.Forms.DateTimePicker();
             dtEStartDate = new System.Windows.Forms.DateTimePicker();
             entityInstantFeedbackSource1 = new DevExpress.Data.Linq.EntityInstantFeedbackSource();
+            btnSearch = new System.Windows.Forms.Button();
+            textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvProjectList).BeginInit();
             SuspendLayout();
             // 
@@ -170,7 +172,7 @@
             // dgvProjectList
             // 
             dgvProjectList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProjectList.Location = new System.Drawing.Point(35, 369);
+            dgvProjectList.Location = new System.Drawing.Point(35, 439);
             dgvProjectList.Name = "dgvProjectList";
             dgvProjectList.RowTemplate.Height = 25;
             dgvProjectList.Size = new System.Drawing.Size(675, 206);
@@ -209,7 +211,7 @@
             // 
             // btnClose
             // 
-            btnClose.Location = new System.Drawing.Point(332, 593);
+            btnClose.Location = new System.Drawing.Point(332, 663);
             btnClose.Name = "btnClose";
             btnClose.Size = new System.Drawing.Size(75, 23);
             btnClose.TabIndex = 21;
@@ -233,11 +235,30 @@
             dtEStartDate.Size = new System.Drawing.Size(212, 23);
             dtEStartDate.TabIndex = 23;
             // 
+            // btnSearch
+            // 
+            btnSearch.Location = new System.Drawing.Point(155, 399);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new System.Drawing.Size(75, 23);
+            btnSearch.TabIndex = 24;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new System.Drawing.Point(245, 399);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(334, 23);
+            textBox1.TabIndex = 25;
+            textBox1.Text = "ID or Name";
+            // 
             // frmProjectManagement
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(753, 639);
+            ClientSize = new System.Drawing.Size(753, 744);
+            Controls.Add(textBox1);
+            Controls.Add(btnSearch);
             Controls.Add(dtEStartDate);
             Controls.Add(dtEEndDAte);
             Controls.Add(btnClose);
@@ -289,5 +310,7 @@
         private System.Windows.Forms.DateTimePicker dtEEndDAte;
         private System.Windows.Forms.DateTimePicker dtEStartDate;
         private DevExpress.Data.Linq.EntityInstantFeedbackSource entityInstantFeedbackSource1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
