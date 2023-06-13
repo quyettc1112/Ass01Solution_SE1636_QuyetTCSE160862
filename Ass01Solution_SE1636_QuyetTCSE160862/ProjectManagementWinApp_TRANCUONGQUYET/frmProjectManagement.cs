@@ -179,8 +179,19 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
         // Hàm này dùng để thêm thông tin cho
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmProjectDetail f = new frmProjectDetail();
-            f.ShowDialog();
+            frmProjectDetail f = new frmProjectDetail()
+            {
+                Text = "ADD New Project",
+                InsertOrUpdate = false, // Chỉnh sang Hàm Insert
+                ProjectRepository = ProjectRepo
+            };
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                LoadProjectList();
+
+
+            }
+            
 
 
         }
