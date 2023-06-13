@@ -52,7 +52,8 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
         private ProjectObject GetProjectObject()
         {
             ProjectObject p = null;
-            try {
+            try
+            {
                 p = new ProjectObject
                 {
                     ProjectID = tbProjectID.Text,
@@ -64,15 +65,17 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
                     ProjectCity = tbProjectCity.Text,
                 };
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message, "Get Project");
-            
+
             }
             return p;
         }
 
         //Hàm này tự động xóa dữ liệu cũ
-        private void Cleartext() {
+        private void Cleartext()
+        {
             tbProjectID.Text = string.Empty;
             tbProjectName.Text = string.Empty;
             tbProjectDes.Text = string.Empty;
@@ -112,14 +115,13 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
                 tbProjectCity.DataBindings.Add("Text", source, "ProjectCity");
                 tbProjectDes.DataBindings.Add("Text", source, "ProjectDescription");
 
-
                 // xóa cái dgrid data củ, thay bằng cái mới
                 dgvProjectList.DataSource = null;
                 dgvProjectList.DataSource = source;
 
                 if (project.Count() == 0) // đếm xem còn project nào trong drig hay ko, nếu còn thi btnDelete.Enabled = true;
                 {
-                    Cleartext();   
+                    Cleartext();
                     btnDelete.Enabled = false;
                 }
                 else
@@ -134,13 +136,15 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e) {
+        private void btnClose_Click(object sender, EventArgs e)
+        {
             DialogResult d;
             d = MessageBox.Show("Bạn có thật sự muốn thoát hay không?", "Quản lý thông tin Project - Thoát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button1);
-            if (d == DialogResult.OK) { 
+            if (d == DialogResult.OK)
+            {
                 this.Close();
-            
+
             }
         } // End Close
 
@@ -149,18 +153,19 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
             DialogResult d;
             try
             {
-             ProjectObject p = GetProjectObject();
+                ProjectObject p = GetProjectObject();
                 if (p != null)
                 {
                     d = MessageBox.Show("Bạn có thật sự muốn xóa hay không?", "Quản lý thông tin Project - Xóa dữ liệu", MessageBoxButtons.OKCancel, MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button1);
                     if (d == DialogResult.OK)
                     {
-                    ProjectRepo.DeleteProject(p.ProjectID);
-                    LoadProjectList();
+                        ProjectRepo.DeleteProject(p.ProjectID);
+                        LoadProjectList();
                     }
                 }
-                else {
+                else
+                {
                     MessageBox.Show("Error");
                 }
             }
@@ -170,6 +175,15 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
             }
         } // End Delete
 
+
+        // Hàm này dùng để thêm thông tin cho
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmProjectDetail f = new frmProjectDetail();
+            f.ShowDialog();
+
+
+        }
 
 
 
