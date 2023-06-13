@@ -48,10 +48,11 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
 
 
 
-        public void LoadProjectList ()
+        public void LoadProjectList()
         {
             var project = ProjectRepo.GetProjectList();
-            try {
+            try
+            {
                 // Lấy dữ liệu của bidingsuou đổ vào cái textbox
                 source = new BindingSource();
                 source.DataSource = project;
@@ -82,7 +83,7 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
 
                 if (project.Count() == 0)
                 {
-                 // Cleartext();   
+                    // Cleartext();   
                     btnDelete.Enabled = false;
                 }
                 else
@@ -98,6 +99,8 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
 
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e) => Close();
 
     }
 }

@@ -47,6 +47,7 @@
             btnLoad = new System.Windows.Forms.Button();
             btnAdd = new System.Windows.Forms.Button();
             btnDelete = new System.Windows.Forms.Button();
+            btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)dgvProjectList).BeginInit();
             SuspendLayout();
             // 
@@ -211,11 +212,22 @@
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
             // 
+            // btnClose
+            // 
+            btnClose.Location = new System.Drawing.Point(293, 595);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new System.Drawing.Size(75, 23);
+            btnClose.TabIndex = 21;
+            btnClose.Text = "Close";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
+            // 
             // frmProjectManagement
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(662, 615);
+            ClientSize = new System.Drawing.Size(662, 639);
+            Controls.Add(btnClose);
             Controls.Add(btnDelete);
             Controls.Add(btnAdd);
             Controls.Add(btnLoad);
@@ -264,5 +276,6 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnClose;
     }
 }

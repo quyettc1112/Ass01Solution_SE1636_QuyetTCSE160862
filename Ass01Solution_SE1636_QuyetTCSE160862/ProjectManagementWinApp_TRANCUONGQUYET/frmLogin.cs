@@ -34,6 +34,7 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
 
             if (txtEmail.Text.Equals(email) && txtPassword.Text.Equals(password))
             {
+                Hide();
                 frmProjectManagement f = new frmProjectManagement();
                 f.ShowDialog();
             }
