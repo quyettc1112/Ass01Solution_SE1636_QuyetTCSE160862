@@ -1,8 +1,10 @@
 ﻿using BusinessObject;
+using DevExpress.Utils.CommonDialogs.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Windows.Forms;
 
 namespace DataAccessObject
 {
@@ -79,7 +81,19 @@ namespace DataAccessObject
         }
 
 
-
+        // Delete một project dựa vào ID
+        public void DeleteProject(String projectID) { 
+            
+            ProjectObject  p = GetProjectByIDOrName(projectID);
+            if (p != null) { 
+                ProjectList.Remove(p);          
+            }
+            else
+            {
+                throw new Exception("Project Not Found!!!");
+            }
+        
+        }
 
 
 

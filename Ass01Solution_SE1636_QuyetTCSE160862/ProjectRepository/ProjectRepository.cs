@@ -1,9 +1,27 @@
-﻿using System;
+﻿using BusinessObject;
+using DataAccessObject;
+using System;
+using System.Collections.Generic;
 
-namespace ProjectRepository
+namespace Repository
 {
-    public class ProjectRepository
+    public class ProjectRepository : IProjectRepository
     {
+        public void AddNewProject(ProjectObject project) => ProjectDAO.Instance.AddProject(project);
+      
 
+        public void DeleteProject(string ProjectID) => ProjectDAO.Instance.DeleteProject(ProjectID);
+       
+
+        public ProjectObject GetProjectByIDOrName(string ProjectID) => ProjectDAO.Instance.GetProjectByIDOrName(ProjectID);
+
+
+        public IEnumerable<ProjectObject> GetProjectList() => ProjectDAO.Instance.getProjectList;
+
+
+        public void UpdateProject(ProjectObject project)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -38,7 +38,6 @@
             label8 = new System.Windows.Forms.Label();
             tbProjectID = new System.Windows.Forms.TextBox();
             tbProjectDes = new System.Windows.Forms.TextBox();
-            tbEStartDate = new System.Windows.Forms.TextBox();
             tbProjectAddress = new System.Windows.Forms.TextBox();
             tbProjectName = new System.Windows.Forms.TextBox();
             tbEEndDAte = new System.Windows.Forms.TextBox();
@@ -47,6 +46,8 @@
             btnLoad = new System.Windows.Forms.Button();
             btnAdd = new System.Windows.Forms.Button();
             btnDelete = new System.Windows.Forms.Button();
+            btnClose = new System.Windows.Forms.Button();
+            tbEStartDate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvProjectList).BeginInit();
             SuspendLayout();
             // 
@@ -138,13 +139,6 @@
             tbProjectDes.Size = new System.Drawing.Size(470, 23);
             tbProjectDes.TabIndex = 10;
             // 
-            // tbEStartDate
-            // 
-            tbEStartDate.Location = new System.Drawing.Point(155, 156);
-            tbEStartDate.Name = "tbEStartDate";
-            tbEStartDate.Size = new System.Drawing.Size(163, 23);
-            tbEStartDate.TabIndex = 11;
-            // 
             // tbProjectAddress
             // 
             tbProjectAddress.Location = new System.Drawing.Point(155, 213);
@@ -162,6 +156,7 @@
             // tbEEndDAte
             // 
             tbEEndDAte.Location = new System.Drawing.Point(462, 156);
+            tbEEndDAte.Multiline = true;
             tbEEndDAte.Name = "tbEEndDAte";
             tbEEndDAte.Size = new System.Drawing.Size(163, 23);
             tbEEndDAte.TabIndex = 15;
@@ -191,6 +186,7 @@
             btnLoad.TabIndex = 18;
             btnLoad.Text = "Load";
             btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Click += btnLoad_Click;
             // 
             // btnAdd
             // 
@@ -200,6 +196,7 @@
             btnAdd.TabIndex = 19;
             btnAdd.Text = "Add New";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnDelete
             // 
@@ -209,12 +206,31 @@
             btnDelete.TabIndex = 20;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnClose
+            // 
+            btnClose.Location = new System.Drawing.Point(293, 595);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new System.Drawing.Size(75, 23);
+            btnClose.TabIndex = 21;
+            btnClose.Text = "Close";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
+            // 
+            // tbEStartDate
+            // 
+            tbEStartDate.Location = new System.Drawing.Point(155, 156);
+            tbEStartDate.Name = "tbEStartDate";
+            tbEStartDate.Size = new System.Drawing.Size(163, 23);
+            tbEStartDate.TabIndex = 11;
             // 
             // frmProjectManagement
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(662, 615);
+            ClientSize = new System.Drawing.Size(662, 639);
+            Controls.Add(btnClose);
             Controls.Add(btnDelete);
             Controls.Add(btnAdd);
             Controls.Add(btnLoad);
@@ -254,7 +270,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbProjectID;
         private System.Windows.Forms.TextBox tbProjectDes;
-        private System.Windows.Forms.TextBox tbEStartDate;
         private System.Windows.Forms.TextBox tbProjectAddress;
         private System.Windows.Forms.TextBox tbProjectName;
         private System.Windows.Forms.TextBox tbEEndDAte;
@@ -263,5 +278,7 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.TextBox tbEStartDate;
     }
 }
