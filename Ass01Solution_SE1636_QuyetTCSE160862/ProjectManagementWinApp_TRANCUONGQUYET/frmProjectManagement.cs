@@ -21,6 +21,8 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
     public partial class frmProjectManagement : Form
     {
 
+        // https://github.com/QuyetTran1112/Ass01Solution_SE1636_QuyetTCSE160862.git
+
 
         // Thêm cái Repositry
         IProjectRepository ProjectRepo = new ProjectRepository();

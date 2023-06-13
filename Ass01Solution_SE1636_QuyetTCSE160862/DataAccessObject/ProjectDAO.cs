@@ -50,7 +50,7 @@ namespace DataAccessObject
 
 
 
-        // Tìm project dựa vào ID hoặc name
+        // Tìm project dựa vào ID 
         public ProjectObject GetProjectByID(String projectID)
         {
             ProjectObject projectObject = ProjectList.SingleOrDefault(id => id.ProjectID == projectID);
