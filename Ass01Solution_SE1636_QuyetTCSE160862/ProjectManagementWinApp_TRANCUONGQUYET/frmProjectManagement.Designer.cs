@@ -40,14 +40,18 @@
             tbProjectDes = new System.Windows.Forms.TextBox();
             tbProjectAddress = new System.Windows.Forms.TextBox();
             tbProjectName = new System.Windows.Forms.TextBox();
-            tbEEndDAte = new System.Windows.Forms.TextBox();
             tbProjectCity = new System.Windows.Forms.TextBox();
             dgvProjectList = new System.Windows.Forms.DataGridView();
             btnLoad = new System.Windows.Forms.Button();
             btnAdd = new System.Windows.Forms.Button();
             btnDelete = new System.Windows.Forms.Button();
             btnClose = new System.Windows.Forms.Button();
-            tbEStartDate = new System.Windows.Forms.TextBox();
+            dtEEndDAte = new System.Windows.Forms.DateTimePicker();
+            dtEStartDate = new System.Windows.Forms.DateTimePicker();
+            entityInstantFeedbackSource1 = new DevExpress.Data.Linq.EntityInstantFeedbackSource();
+            btnSearch = new System.Windows.Forms.Button();
+            tbSearch = new System.Windows.Forms.TextBox();
+            label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dgvProjectList).BeginInit();
             SuspendLayout();
             // 
@@ -74,7 +78,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(342, 109);
+            label3.Location = new System.Drawing.Point(378, 112);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(79, 15);
             label3.TabIndex = 2;
@@ -101,7 +105,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(342, 159);
+            label6.Location = new System.Drawing.Point(378, 162);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(106, 15);
             label6.TabIndex = 5;
@@ -110,7 +114,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new System.Drawing.Point(342, 216);
+            label7.Location = new System.Drawing.Point(378, 219);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(65, 15);
             label7.TabIndex = 6;
@@ -127,54 +131,52 @@
             // 
             // tbProjectID
             // 
+            tbProjectID.Enabled = false;
             tbProjectID.Location = new System.Drawing.Point(155, 108);
             tbProjectID.Name = "tbProjectID";
-            tbProjectID.Size = new System.Drawing.Size(163, 23);
+            tbProjectID.ReadOnly = true;
+            tbProjectID.Size = new System.Drawing.Size(213, 23);
             tbProjectID.TabIndex = 8;
             // 
             // tbProjectDes
             // 
             tbProjectDes.Location = new System.Drawing.Point(155, 272);
             tbProjectDes.Name = "tbProjectDes";
-            tbProjectDes.Size = new System.Drawing.Size(470, 23);
+            tbProjectDes.ReadOnly = true;
+            tbProjectDes.Size = new System.Drawing.Size(555, 23);
             tbProjectDes.TabIndex = 10;
             // 
             // tbProjectAddress
             // 
             tbProjectAddress.Location = new System.Drawing.Point(155, 213);
             tbProjectAddress.Name = "tbProjectAddress";
-            tbProjectAddress.Size = new System.Drawing.Size(163, 23);
+            tbProjectAddress.ReadOnly = true;
+            tbProjectAddress.Size = new System.Drawing.Size(213, 23);
             tbProjectAddress.TabIndex = 13;
             // 
             // tbProjectName
             // 
-            tbProjectName.Location = new System.Drawing.Point(462, 108);
+            tbProjectName.Location = new System.Drawing.Point(498, 109);
             tbProjectName.Name = "tbProjectName";
-            tbProjectName.Size = new System.Drawing.Size(163, 23);
+            tbProjectName.ReadOnly = true;
+            tbProjectName.Size = new System.Drawing.Size(212, 23);
             tbProjectName.TabIndex = 14;
-            // 
-            // tbEEndDAte
-            // 
-            tbEEndDAte.Location = new System.Drawing.Point(462, 156);
-            tbEEndDAte.Multiline = true;
-            tbEEndDAte.Name = "tbEEndDAte";
-            tbEEndDAte.Size = new System.Drawing.Size(163, 23);
-            tbEEndDAte.TabIndex = 15;
             // 
             // tbProjectCity
             // 
-            tbProjectCity.Location = new System.Drawing.Point(462, 216);
+            tbProjectCity.Location = new System.Drawing.Point(498, 213);
             tbProjectCity.Name = "tbProjectCity";
-            tbProjectCity.Size = new System.Drawing.Size(163, 23);
+            tbProjectCity.ReadOnly = true;
+            tbProjectCity.Size = new System.Drawing.Size(212, 23);
             tbProjectCity.TabIndex = 16;
             // 
             // dgvProjectList
             // 
             dgvProjectList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProjectList.Location = new System.Drawing.Point(35, 371);
+            dgvProjectList.Location = new System.Drawing.Point(35, 473);
             dgvProjectList.Name = "dgvProjectList";
             dgvProjectList.RowTemplate.Height = 25;
-            dgvProjectList.Size = new System.Drawing.Size(590, 206);
+            dgvProjectList.Size = new System.Drawing.Size(675, 206);
             dgvProjectList.TabIndex = 17;
             dgvProjectList.CellContentClick += dgvProjectList_CellContentClick;
             // 
@@ -190,7 +192,7 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new System.Drawing.Point(293, 324);
+            btnAdd.Location = new System.Drawing.Point(332, 324);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new System.Drawing.Size(75, 23);
             btnAdd.TabIndex = 19;
@@ -200,7 +202,7 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new System.Drawing.Point(498, 324);
+            btnDelete.Location = new System.Drawing.Point(602, 324);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new System.Drawing.Size(75, 23);
             btnDelete.TabIndex = 20;
@@ -210,7 +212,7 @@
             // 
             // btnClose
             // 
-            btnClose.Location = new System.Drawing.Point(293, 595);
+            btnClose.Location = new System.Drawing.Point(332, 697);
             btnClose.Name = "btnClose";
             btnClose.Size = new System.Drawing.Size(75, 23);
             btnClose.TabIndex = 21;
@@ -218,28 +220,67 @@
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click;
             // 
-            // tbEStartDate
+            // dtEEndDAte
             // 
-            tbEStartDate.Location = new System.Drawing.Point(155, 156);
-            tbEStartDate.Name = "tbEStartDate";
-            tbEStartDate.Size = new System.Drawing.Size(163, 23);
-            tbEStartDate.TabIndex = 11;
+            dtEEndDAte.Enabled = false;
+            dtEEndDAte.Location = new System.Drawing.Point(498, 156);
+            dtEEndDAte.Name = "dtEEndDAte";
+            dtEEndDAte.Size = new System.Drawing.Size(212, 23);
+            dtEEndDAte.TabIndex = 22;
+            // 
+            // dtEStartDate
+            // 
+            dtEStartDate.Enabled = false;
+            dtEStartDate.Location = new System.Drawing.Point(155, 156);
+            dtEStartDate.Name = "dtEStartDate";
+            dtEStartDate.Size = new System.Drawing.Size(212, 23);
+            dtEStartDate.TabIndex = 23;
+            // 
+            // btnSearch
+            // 
+            btnSearch.Location = new System.Drawing.Point(155, 399);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new System.Drawing.Size(75, 23);
+            btnSearch.TabIndex = 24;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // tbSearch
+            // 
+            tbSearch.Location = new System.Drawing.Point(245, 399);
+            tbSearch.Name = "tbSearch";
+            tbSearch.Size = new System.Drawing.Size(334, 23);
+            tbSearch.TabIndex = 25;
+            tbSearch.Text = "PJ01";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new System.Drawing.Point(245, 434);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(295, 15);
+            label9.TabIndex = 26;
+            label9.Text = "Hàm tìm kiếm theo ID hoặc Tên (Ví dụ: PJ01 hoặc PRN)";
             // 
             // frmProjectManagement
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(662, 639);
+            ClientSize = new System.Drawing.Size(753, 744);
+            Controls.Add(label9);
+            Controls.Add(tbSearch);
+            Controls.Add(btnSearch);
+            Controls.Add(dtEStartDate);
+            Controls.Add(dtEEndDAte);
             Controls.Add(btnClose);
             Controls.Add(btnDelete);
             Controls.Add(btnAdd);
             Controls.Add(btnLoad);
             Controls.Add(dgvProjectList);
             Controls.Add(tbProjectCity);
-            Controls.Add(tbEEndDAte);
             Controls.Add(tbProjectName);
             Controls.Add(tbProjectAddress);
-            Controls.Add(tbEStartDate);
             Controls.Add(tbProjectDes);
             Controls.Add(tbProjectID);
             Controls.Add(label8);
@@ -272,13 +313,17 @@
         private System.Windows.Forms.TextBox tbProjectDes;
         private System.Windows.Forms.TextBox tbProjectAddress;
         private System.Windows.Forms.TextBox tbProjectName;
-        private System.Windows.Forms.TextBox tbEEndDAte;
         private System.Windows.Forms.TextBox tbProjectCity;
         private System.Windows.Forms.DataGridView dgvProjectList;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TextBox tbEStartDate;
+        private System.Windows.Forms.DateTimePicker dtEEndDAte;
+        private System.Windows.Forms.DateTimePicker dtEStartDate;
+        private DevExpress.Data.Linq.EntityInstantFeedbackSource entityInstantFeedbackSource1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -19,9 +19,7 @@ namespace Repository
         public IEnumerable<ProjectObject> GetProjectList() => ProjectDAO.Instance.getProjectList;
 
 
-        public void UpdateProject(ProjectObject project)
-        {
-            throw new NotImplementedException();
-        }
+        public void UpdateProject(ProjectObject project) => ProjectDAO.Instance.UpdateProject(project);
+       
     }
 }

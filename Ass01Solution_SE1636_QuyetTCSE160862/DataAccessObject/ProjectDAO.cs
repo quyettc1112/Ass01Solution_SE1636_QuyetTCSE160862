@@ -1,10 +1,8 @@
 ﻿using BusinessObject;
-using DevExpress.Utils.CommonDialogs.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace DataAccessObject
 {
@@ -12,13 +10,13 @@ namespace DataAccessObject
     {
         // Tạo Collection một List Project
         private static List<ProjectObject> ProjectList = new List<ProjectObject>() {
-            new ProjectObject{ProjectID = "PJ01", ProjectName = "PRN", EstimatedStartDate = "01/01/2023", EstimatedEndDate = "02/01/2023",
+            new ProjectObject{ProjectID = "PJ01", ProjectName = "PRN", EstimatedStartDate = "01/01/2023", EstimatedEndDate = "01/02/2023",
             ProjectDescription = "PRN AssignMent", ProjectAddress = "TX25, Q12", ProjectCity = "HCM"
             },
-            new ProjectObject{ProjectID = "PJ02", ProjectName = "SWP", EstimatedStartDate = "01/01/2023", EstimatedEndDate = "02/01/2023",
+            new ProjectObject{ProjectID = "PJ02", ProjectName = "SWP", EstimatedStartDate = "09/20/2023", EstimatedEndDate = "09/24/2023",
             ProjectDescription = "SWP AssignMent", ProjectAddress = "Thanh Xuan", ProjectCity = "HN"
             },
-            new ProjectObject{ProjectID = "PJ03", ProjectName = "SWR", EstimatedStartDate = "01/01/2023", EstimatedEndDate = "02/01/2023",
+            new ProjectObject{ProjectID = "PJ03", ProjectName = "SWR", EstimatedStartDate = "03/25/2023", EstimatedEndDate = "03/29/2023",
             ProjectDescription = "SWR AssignMent", ProjectAddress = "Tri Ton", ProjectCity = "AG"
             }
         };
@@ -30,10 +28,11 @@ namespace DataAccessObject
 
         private static ProjectDAO instance = null;
         private static readonly object instanceLock = new object();
-        private ProjectDAO() {}  // bước này để không cho phép tạo toán tử new
+        private ProjectDAO() { }  // bước này để không cho phép tạo toán tử new
         public static ProjectDAO Instance // tạo đối tượng duy nhất cho phép truy cập từ bên ngoài 
         {
-            get { 
+            get
+            {
                 lock (instanceLock)
                 {
                     if (instance == null)
@@ -41,7 +40,7 @@ namespace DataAccessObject
                         instance = new ProjectDAO();
                     }
                     return instance;
-                } 
+                }
             }
         } // end 
 
@@ -52,23 +51,16 @@ namespace DataAccessObject
 
 
         // Tìm project dựa vào ID hoặc name
-        public ProjectObject GetProjectByID(String projectID) {
+        public ProjectObject GetProjectByID(String projectID)
+        {
             ProjectObject projectObject = ProjectList.SingleOrDefault(id => id.ProjectID == projectID);
-            if (projectObject != null)
-            {
-                projectObject = ProjectList.SingleOrDefault(name => name.ProjectName == projectID);
-                return projectObject;
-            }
-            else
-            {
-                throw new Exception($"Project ID = {projectObject.ProjectID} is not found");
-            }
+            return projectObject;
 
         }
 
 
         // ADD new Project vào Project List
-        public void AddProject (ProjectObject projectObject)
+        public void AddProject(ProjectObject projectObject)
         {
             // Check Dupplicated
             ProjectObject Po = GetProjectByID(projectObject.ProjectID);
@@ -76,25 +68,41 @@ namespace DataAccessObject
             {
                 ProjectList.Add(projectObject);
             }
-            else {
+            else
+            {
                 throw new Exception($"Project ID = {projectObject.ProjectID} is already exists");
             }
         }
 
         // Delete một project dựa vào ID
-        public void DeleteProject(String projectID) { 
-            
-            ProjectObject  p = GetProjectByID(projectID);
-            if (p != null) { 
-                ProjectList.Remove(p);          
+        public void DeleteProject(String projectID)
+        {
+
+            ProjectObject p = GetProjectByID(projectID);
+            if (p != null)
+            {
+                ProjectList.Remove(p);
             }
             else
             {
                 throw new Exception("Project Not Found!!!");
             }
-        
+
         }
 
+        // Update một project
+        public void UpdateProject(ProjectObject p) { 
+            ProjectObject po = GetProjectByID(p.ProjectID);
+            if (po != null)
+            {
+                var i = ProjectList.IndexOf(po);
+                ProjectList[i] = po;
+            }
+            else {
+                throw new Exception("Project not Found");
+            
+            }
+        }
 
 
 

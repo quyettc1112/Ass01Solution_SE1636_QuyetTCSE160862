@@ -29,8 +29,7 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
                 .Build();
             var email = builder["AdminAccount:Email"];
             var password = builder["AdminAccount:Password"];
-            txtEmail.Text = email;
-            txtPassword.Text = password;
+            
 
             if (txtEmail.Text.Equals(email) && txtPassword.Text.Equals(password))
             {
