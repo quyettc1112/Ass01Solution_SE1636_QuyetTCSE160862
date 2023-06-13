@@ -9,7 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessObject;
+using Microsoft.VisualBasic.Devices;
+using Octopus.Client.Model;
 using Repository;
+using static Octopus.Client.Model.TenantVariableResource;
 
 
 namespace ProjectManagementWinApp_TRANCUONGQUYET
@@ -206,9 +209,21 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
 
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            
 
+            var project = ProjectRepo.GetProjectList();
+            // Lấy dữ liệu của bidingsuou đổ vào cái textbox
+            source = new BindingSource();
+            source.DataSource = project;
 
-
-
+            var keyword = tbSearch.Text;
+            var results = source.Cast<ProjectObject>()
+                         .Where(p => p.ProjectName.Contains(keyword) || p.ProjectID == keyword)
+                         .ToList();
+            source.DataSource = results;
+            dgvProjectList.DataSource = source;
+        }
     }
 }
