@@ -102,5 +102,11 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
 
         private void btnClose_Click(object sender, EventArgs e) => Close();
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult d;
+            d = MessageBox.Show("Bạn có thật sự muốn xóa hay không?", "Quản lý thông tin truyện tranh - Xóa dữ liệu", MessageBoxButtons.OKCancel, MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button1);
+        }
     }
 }

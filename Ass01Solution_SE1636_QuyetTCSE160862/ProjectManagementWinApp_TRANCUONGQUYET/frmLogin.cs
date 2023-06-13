@@ -37,6 +37,7 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
                 Hide();
                 frmProjectManagement f = new frmProjectManagement();
                 f.ShowDialog();
+                this.Close();
             }
             else MessageBox.Show("Fail", "Notification");
 
