@@ -84,20 +84,14 @@ namespace DataAccessObject
         // Delete một project dựa vào ID
         public void DeleteProject(String projectID) { 
             
-
-
-
             ProjectObject  p = GetProjectByIDOrName(projectID);
-            if (p != null) {
-               
+            if (p != null) { 
                 ProjectList.Remove(p);          
             }
             else
             {
                 throw new Exception("Project Not Found!!!");
             }
-        
-        
         
         }
 

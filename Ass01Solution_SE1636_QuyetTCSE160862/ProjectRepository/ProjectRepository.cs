@@ -10,10 +10,8 @@ namespace Repository
         public void AddNewProject(ProjectObject project) => ProjectDAO.Instance.AddProject(project);
       
 
-        public void DeleteProject(string ProjectID)
-        {
-            throw new NotImplementedException();
-        }
+        public void DeleteProject(string ProjectID) => ProjectDAO.Instance.DeleteProject(ProjectID);
+       
 
         public ProjectObject GetProjectByIDOrName(string ProjectID) => ProjectDAO.Instance.GetProjectByIDOrName(ProjectID);
 
