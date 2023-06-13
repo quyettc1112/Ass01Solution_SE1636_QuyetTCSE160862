@@ -35,15 +35,15 @@
             label5 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
-            tbProjectID = new System.Windows.Forms.TextBox();
             tbProjectName = new System.Windows.Forms.TextBox();
             tbProjectDes = new System.Windows.Forms.TextBox();
             tbProjectAddress = new System.Windows.Forms.TextBox();
             button1 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
-            mEStartDate = new System.Windows.Forms.MaskedTextBox();
-            mEEndDate = new System.Windows.Forms.MaskedTextBox();
             tbProjectCTy = new System.Windows.Forms.TextBox();
+            dtESD = new System.Windows.Forms.DateTimePicker();
+            dtEED = new System.Windows.Forms.DateTimePicker();
+            mkProjectID = new System.Windows.Forms.MaskedTextBox();
             SuspendLayout();
             // 
             // label1
@@ -51,9 +51,9 @@
             label1.AutoSize = true;
             label1.Location = new System.Drawing.Point(32, 57);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(58, 15);
+            label1.Size = new System.Drawing.Size(89, 15);
             label1.TabIndex = 0;
-            label1.Text = "Project ID";
+            label1.Text = "Project ID (PJ__)";
             // 
             // label2
             // 
@@ -109,13 +109,6 @@
             label7.TabIndex = 6;
             label7.Text = "Project City";
             // 
-            // tbProjectID
-            // 
-            tbProjectID.Location = new System.Drawing.Point(196, 54);
-            tbProjectID.Name = "tbProjectID";
-            tbProjectID.Size = new System.Drawing.Size(267, 23);
-            tbProjectID.TabIndex = 7;
-            // 
             // tbProjectName
             // 
             tbProjectName.Location = new System.Drawing.Point(196, 119);
@@ -155,24 +148,7 @@
             button2.TabIndex = 15;
             button2.Text = "&Close";
             button2.UseVisualStyleBackColor = true;
-            // 
-            // mEStartDate
-            // 
-            mEStartDate.Location = new System.Drawing.Point(196, 242);
-            mEStartDate.Mask = "00/00/0000";
-            mEStartDate.Name = "mEStartDate";
-            mEStartDate.Size = new System.Drawing.Size(267, 23);
-            mEStartDate.TabIndex = 16;
-            mEStartDate.ValidatingType = typeof(System.DateTime);
-            // 
-            // mEEndDate
-            // 
-            mEEndDate.Location = new System.Drawing.Point(196, 295);
-            mEEndDate.Mask = "00/00/0000";
-            mEEndDate.Name = "mEEndDate";
-            mEEndDate.Size = new System.Drawing.Size(267, 23);
-            mEEndDate.TabIndex = 17;
-            mEEndDate.ValidatingType = typeof(System.DateTime);
+            button2.Click += button2_Click;
             // 
             // tbProjectCTy
             // 
@@ -181,20 +157,42 @@
             tbProjectCTy.Size = new System.Drawing.Size(267, 23);
             tbProjectCTy.TabIndex = 18;
             // 
+            // dtESD
+            // 
+            dtESD.Location = new System.Drawing.Point(196, 236);
+            dtESD.Name = "dtESD";
+            dtESD.Size = new System.Drawing.Size(267, 23);
+            dtESD.TabIndex = 19;
+            // 
+            // dtEED
+            // 
+            dtEED.Location = new System.Drawing.Point(196, 292);
+            dtEED.Name = "dtEED";
+            dtEED.Size = new System.Drawing.Size(267, 23);
+            dtEED.TabIndex = 20;
+            // 
+            // mkProjectID
+            // 
+            mkProjectID.Location = new System.Drawing.Point(196, 54);
+            mkProjectID.Mask = "PJ00";
+            mkProjectID.Name = "mkProjectID";
+            mkProjectID.Size = new System.Drawing.Size(267, 23);
+            mkProjectID.TabIndex = 21;
+            // 
             // frmProjectDetail
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(554, 521);
+            Controls.Add(mkProjectID);
+            Controls.Add(dtEED);
+            Controls.Add(dtESD);
             Controls.Add(tbProjectCTy);
-            Controls.Add(mEEndDate);
-            Controls.Add(mEStartDate);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(tbProjectAddress);
             Controls.Add(tbProjectDes);
             Controls.Add(tbProjectName);
-            Controls.Add(tbProjectID);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -204,6 +202,7 @@
             Controls.Add(label1);
             Name = "frmProjectDetail";
             Text = "frmProjectDetail";
+            Load += frmProjectDetail_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -217,7 +216,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbProjectID;
         private System.Windows.Forms.TextBox tbProjectName;
         private System.Windows.Forms.TextBox tbProjectDes;
         private System.Windows.Forms.TextBox textBox4;
@@ -226,8 +224,9 @@
         private System.Windows.Forms.TextBox tbProjectAddress;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.MaskedTextBox mEStartDate;
-        private System.Windows.Forms.MaskedTextBox mEEndDate;
         private System.Windows.Forms.TextBox tbProjectCTy;
+        private System.Windows.Forms.DateTimePicker dtESD;
+        private System.Windows.Forms.DateTimePicker dtEED;
+        private System.Windows.Forms.MaskedTextBox mkProjectID;
     }
 }

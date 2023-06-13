@@ -39,6 +39,18 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
 
         private void dgvProjectList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            frmProjectDetail detail = new frmProjectDetail
+            {
+                Text = "Update Project",
+                InsertOrUpdate = true, // true đại diện cho update
+                Project = GetProjectObject(),
+                ProjectRepository = ProjectRepo
+            };
+            if (detail.ShowDialog() == DialogResult.OK)
+            {
+                LoadProjectList();
+
+            }
 
         }
 
@@ -59,8 +71,8 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
                     ProjectID = tbProjectID.Text,
                     ProjectName = tbProjectName.Text,
                     ProjectDescription = tbProjectDes.Text,
-                    EstimatedStartDate = tbEStartDate.Text,
-                    EstimatedEndDate = tbEEndDAte.Text,
+                    EstimatedStartDate = dtEStartDate.Text,
+                    EstimatedEndDate = dtEEndDAte.Text,
                     ProjectAddress = tbProjectAddress.Text,
                     ProjectCity = tbProjectCity.Text,
                 };
@@ -79,8 +91,8 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
             tbProjectID.Text = string.Empty;
             tbProjectName.Text = string.Empty;
             tbProjectDes.Text = string.Empty;
-            tbEEndDAte.Text = string.Empty;
-            tbEStartDate.Text = string.Empty;
+            dtEEndDAte.Text = string.Empty;
+            dtEStartDate.Text = string.Empty;
             tbProjectAddress.Text = string.Empty;
             tbProjectCity.Text = string.Empty;
         }
@@ -92,6 +104,7 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
             var project = ProjectRepo.GetProjectList();
             try
             {
+                Cleartext();
                 // Lấy dữ liệu của bidingsuou đổ vào cái textbox
                 source = new BindingSource();
                 source.DataSource = project;
@@ -99,8 +112,8 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
                 //. Xóa dữ liệu cũ nếu có
                 tbProjectID.DataBindings.Clear();
                 tbProjectName.DataBindings.Clear();
-                tbEStartDate.DataBindings.Clear();
-                tbEEndDAte.DataBindings.Clear();
+                dtEStartDate.DataBindings.Clear();
+                dtEEndDAte.DataBindings.Clear();
                 tbProjectAddress.DataBindings.Clear();
                 tbProjectCity.DataBindings.Clear();
                 tbProjectDes.DataBindings.Clear();
@@ -109,8 +122,8 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
                 // Đổ dữ liệu mới vào 
                 tbProjectID.DataBindings.Add("Text", source, "ProjectID");
                 tbProjectName.DataBindings.Add("Text", source, "ProjectName");
-                tbEStartDate.DataBindings.Add("Text", source, "EstimatedStartDate");
-                tbEEndDAte.DataBindings.Add("Text", source, "EstimatedEndDate");
+                dtEStartDate.DataBindings.Add("Text", source, "EstimatedStartDate");
+                dtEEndDAte.DataBindings.Add("Text", source, "EstimatedEndDate");
                 tbProjectAddress.DataBindings.Add("Text", source, "ProjectAddress");
                 tbProjectCity.DataBindings.Add("Text", source, "ProjectCity");
                 tbProjectDes.DataBindings.Add("Text", source, "ProjectDescription");
@@ -188,11 +201,8 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
             if (f.ShowDialog() == DialogResult.OK)
             {
                 LoadProjectList();
-
-
+                source.Position = source.Count - 1;
             }
-            
-
 
         }
 

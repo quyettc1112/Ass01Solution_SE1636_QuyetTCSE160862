@@ -29,37 +29,64 @@ namespace ProjectManagementWinApp_TRANCUONGQUYET
         // Hàm này có thể dùng để lấy dữ liệu của project người dủng chọn
         public ProjectObject Project { get; set; }
 
-       
 
-        //--------------------------------------------------------
+
+
+
+
+        //-Hàm nay để thêm mới Project hoặc Update Project
         private void button1_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 var P = new ProjectObject
                 {
-                    ProjectID = tbProjectID.Text,
+                    ProjectID = mkProjectID.Text,
                     ProjectName = tbProjectName.Text,
                     ProjectCity = tbProjectCTy.Text,
-                    EstimatedEndDate = mEEndDate.Text,
-                    EstimatedStartDate = mEStartDate.Text,
+                    EstimatedEndDate = dtEED.Value.ToString("MM/dd/yyyy"),
+                    EstimatedStartDate = dtESD.Value.ToString("MM/dd/yyyy"),
                     ProjectAddress = tbProjectAddress.Text,
                     ProjectDescription = tbProjectDes.Text,
                 };
-                if (InsertOrUpdate == false) {
+                if (InsertOrUpdate == false)
+                {
                     // Tạo mới
                     ProjectRepository.AddNewProject(P);
-                
+                    DialogResult = DialogResult.OK;
                 }
-
-
-
-
+                else
+                {
+                    ProjectRepository.UpdateProject(P);
+                    DialogResult = DialogResult.OK;
+                }
             }
-            catch (Exception ex) {
-                MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add a new car" : "Update a car");
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add a new Project" : "Update a Project");
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
+
+        // Load dữ liệu của Project
+        private void frmProjectDetail_Load(object sender, EventArgs e)
+        {
+            if (InsertOrUpdate == true)
+            {
+                mkProjectID.Text = Project.ProjectID;
+                tbProjectName.Text = Project.ProjectName;
+                tbProjectDes.Text = Project.ProjectDescription;
+                dtESD.Text = Project.EstimatedStartDate;
+                dtEED.Text = Project.EstimatedEndDate;
+                tbProjectAddress.Text = Project.ProjectAddress;
+                tbProjectCTy.Text = Project.ProjectCity;
+
+            }
+        }
     }
 }
