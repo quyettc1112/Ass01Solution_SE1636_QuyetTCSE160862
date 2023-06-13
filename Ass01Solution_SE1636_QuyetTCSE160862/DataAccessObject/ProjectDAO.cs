@@ -54,15 +54,16 @@ namespace DataAccessObject
         // Tìm project dựa vào ID hoặc name
         public ProjectObject GetProjectByIDOrName(String projectID) {
             ProjectObject projectObject = ProjectList.SingleOrDefault(id => id.ProjectID == projectID);
-            if (projectObject == null)
+            if (projectObject != null)
             {
                 projectObject = ProjectList.SingleOrDefault(name => name.ProjectName == projectID);
-                if (projectObject == null)
-                {
-                    throw new Exception("ID Or Name not Found");
-                } else return projectObject;
+                return projectObject;
             }
-            return projectObject;
+            else
+            {
+                throw new Exception($"Project ID = {projectObject.ProjectID} is not found");
+            }
+
         }
 
 
@@ -79,7 +80,6 @@ namespace DataAccessObject
                 throw new Exception($"Project ID = {projectObject.ProjectID} is already exists");
             }
         }
-
 
         // Delete một project dựa vào ID
         public void DeleteProject(String projectID) { 
